@@ -35,12 +35,16 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = activate;
 exports.deactivate = deactivate;
+// biome-ignore lint/performance/noNamespaceImport: Testing
 const vscode = __importStar(require("vscode"));
 function activate(context) {
+    // biome-ignore lint/suspicious/noConsole: Testing
     console.log('Congratulations, your extension "agentic" is now active!');
     const disposable = vscode.commands.registerCommand('agentic.helloWorld', () => {
         vscode.window.showInformationMessage('Hello World from Agentic!');
     });
     context.subscriptions.push(disposable);
 }
-function deactivate() { }
+function deactivate() {
+    //
+}

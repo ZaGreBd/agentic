@@ -3,19 +3,26 @@
   "displayName": "Agentic",
   "description": "Code, vibe, chill, enjoy!",
   "version": "0.0.1",
+  "publisher": "Umiokai",
   "engines": {
     "vscode": "^1.102.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Snippets",
+    "Themes"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "agentic.helloWorld",
-        "title": "Hello World"
+        "command": "dynamicVibes.start",
+        "title": "Dynamic Vibes: Start"
+      },
+      {
+        "command": "dynamicVibes.stop",
+        "title": "Dynamic Vibes: Stop"
       }
     ]
   },
@@ -24,7 +31,9 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.1",
@@ -35,5 +44,8 @@
     "@vscode/test-electron": "^2.5.2",
     "typescript": "^5.8.3",
     "ultracite": "5.0.36"
+  },
+  "dependencies": {
+    "axios": "^1.10.0"
   }
 }

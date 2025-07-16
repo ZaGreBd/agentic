@@ -19,3 +19,6 @@ https://www.npmjs.com/package/@tsconfig/node22 (package.json)
 
 npm i @biomejs/biome -D
 npx ultracite init
+
+npm i axios
+npm install -g vsce
